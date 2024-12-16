@@ -1,0 +1,25 @@
+﻿<Window x:Class="VisualFramework.UI.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VisualFramework.UI.Views"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <!-- 工具链视图（包含节点编辑器） -->
+        <Grid Name="ToolchainGrid" Grid.Row="0" Grid.Column="0">
+            <Canvas Name="ToolchainCanvas" Background="White"/>
+        </Grid>
+
+        <!-- 参数面板 -->
+        <TabControl Name="ParameterTabControl" Grid.Row="0" Grid.Column="1">
+            <TabItem Header="Parameters">
+                <ListBox Name="ParameterListBox" />
+            </TabItem>
+        </TabControl>
+
+        <!-- 日志输出 -->
+        <TextBox Name="LogTextBox" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" IsReadOnly="True" Margin="0,400,0,0" Height="200"/>
+    </Grid>
+</Window>
